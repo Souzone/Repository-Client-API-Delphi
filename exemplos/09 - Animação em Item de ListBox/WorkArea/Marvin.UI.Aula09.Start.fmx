@@ -1,0 +1,122 @@
+object FormAula09: TFormAula09
+  Left = 0
+  Top = 0
+  Caption = 'Aula 09'
+  ClientHeight = 480
+  ClientWidth = 720
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ListBox: TListBox
+    Align = Client
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Size.Width = 704.000000000000000000
+    Size.Height = 391.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    OnDblClick = ListBoxDblClick
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 700.000000000000000000
+    Viewport.Height = 387.000000000000000000
+  end
+  object Layout: TLayout
+    Align = Top
+    Padding.Left = 8.000000000000000000
+    Padding.Top = 8.000000000000000000
+    Padding.Right = 8.000000000000000000
+    Padding.Bottom = 8.000000000000000000
+    Size.Width = 720.000000000000000000
+    Size.Height = 73.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Edit: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 0
+      Text = 'Teste de Inclus'#227'o de Item com Anima'#231#227'o.'
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 16.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 704.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Style, FontColor]
+    end
+    object ButtonAnimacao01: TButton
+      Align = Left
+      StyledSettings = [Style, FontColor]
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 168.000000000000000000
+      Position.Y = 38.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Anima'#231#227'o 1'
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 16.000000000000000000
+      OnClick = ButtonAnimacao01Click
+    end
+    object ButtonAnimacao02: TButton
+      Align = Left
+      StyledSettings = [Style, FontColor]
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 298.000000000000000000
+      Position.Y = 38.000000000000000000
+      Size.Width = 112.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Anima'#231#227'o 2'
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 16.000000000000000000
+      OnClick = ButtonAnimacao02Click
+    end
+    object ButtonInclusaoSimples: TButton
+      Align = Left
+      StyledSettings = [Style, FontColor]
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 13.000000000000000000
+      Position.Y = 38.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Inclus'#227'o Simples'
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 16.000000000000000000
+      OnClick = ButtonInclusaoSimplesClick
+    end
+    object ButtonAnimacao03: TButton
+      Align = Left
+      StyledSettings = [Style, FontColor]
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 420.000000000000000000
+      Position.Y = 38.000000000000000000
+      Size.Width = 112.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Anima'#231#227'o 3'
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 16.000000000000000000
+      OnClick = ButtonAnimacao03Click
+    end
+  end
+end

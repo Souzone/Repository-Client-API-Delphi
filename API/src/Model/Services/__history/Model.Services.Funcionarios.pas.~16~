@@ -1,0 +1,75 @@
+unit Model.Services.Funcionarios;
+
+interface
+
+uses
+  Model.Interfaces,
+  System.JSON,
+  FireDAC.Comp.Client,
+  DataSet.Serialize;
+
+type
+  TModelServicesFuncionarios = class(TInterfacedObject,IModelServicesFuncionarios)
+  private
+    [weak]
+    Fparent:IModelProviders;
+  public
+    Constructor Create(Aparent :IModelProviders);
+    Destructor Destroy; Override;
+    Class Function New(Aparent :IModelProviders): IModelServicesFuncionarios;
+    Function Insert(Const AFuncionario: TJsonObject): TFDQuery;
+    Function GetById(Const AId: Int64): TFDQuery;
+    Function ListAll: TFDQuery;
+
+  end;
+
+implementation
+
+{ TModelServicesFuncionarios }
+
+Constructor TModelServicesFuncionarios.Create(Aparent :IModelProviders);
+begin
+  Fparent := Aparent;
+end;
+
+destructor TModelServicesFuncionarios.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelServicesFuncionarios.GetById(const AId: Int64): TFDQuery;
+begin
+  Result:= Fparent.FdConexao;
+  Fparent.FdConexao.close;
+  Fparent.FdConexao.sql.Clear;
+  Fparent.FdConexao.sql.text:='select * from funcionarios where id=:id';
+  Fparent.FdConexao.ParamByName('id').AsLargeInt :=Aid;
+  Fparent.FdConexao.Open;
+end;
+
+function TModelServicesFuncionarios.Insert(const AFuncionario: TJsonObject): TFDQuery;
+begin
+  Result:= Fparent.FdConexao;
+  Fparent.FdConexao.close;
+  Fparent.FdConexao.sql.Clear;
+  Fparent.FdConexao.sql.text:='select * from funcionarios where 1<>1';
+  Fparent.FdConexao.Open;
+  Fparent.FdConexao.loadfromJson(AFuncionario,false)
+end;
+
+function TModelServicesFuncionarios.ListAll: TFDQuery;
+begin
+  Result:= Fparent.FdConexao;
+  Fparent.FdConexao.close;
+  Fparent.FdConexao.sql.Clear;
+  Fparent.FdConexao.sql.text:='select * from funcionarios';
+  Fparent.FdConexao.Open;
+end;
+
+class Function TModelServicesFuncionarios.New(Aparent :IModelProviders): IModelServicesFuncionarios;
+begin
+  Result := self.Create(Aparent);
+end;
+
+end.

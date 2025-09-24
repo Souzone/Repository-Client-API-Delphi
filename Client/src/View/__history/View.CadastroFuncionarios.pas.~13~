@@ -1,0 +1,76 @@
+unit View.CadastroFuncionarios;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Dialogs,
+  FMX.Controls.Presentation,
+  FMX.StdCtrls,
+  FMX.Edit,
+  FMX.Objects,
+  FMX.Ani,
+  System.JSON,
+  RESTRequest4D,
+  DataSet.Serialize.Adapter.RESTRequest4D;
+
+type
+  TFrmCadFun = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    EdtNome: TEdit;
+    EdtSalario: TEdit;
+    Rectangle6: TRectangle;
+    BtnConsultar: TSpeedButton;
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
+    FloatAnimation1: TFloatAnimation;
+    procedure BtnConsultarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCadFun: TFrmCadFun;
+
+implementation
+
+{$R *.fmx}
+uses
+  view.Main;
+
+procedure TFrmCadFun.BtnConsultarClick(Sender: TObject);
+var
+LFuncionario: TJSONObject;
+Lresponse: IResponse;
+begin
+  LFuncionario := TJSONObject.Create
+    .AddPair ('nome', Edtnome.Text)
+    .AddPair ('salario', TJSONNumber.Create(EdtSalario.Text));
+
+ Lresponse:=TRequest.New.BaseURL ('http://localhost:9000')
+      .Resource ('Funcionarios')
+      .Adapters(TDataSetSerializeAdapter.new(FrmMain.FDMemTable1))
+      .BasicAuthentication ('user', '123')
+      .AddBody(LFuncionario)
+      .Post;
+
+  if Lresponse.StatusCode = 201 then
+  begin
+    showmessage('Inclusão Realizada Com Sucesso!');
+    FrmMain.povoarTabela;
+    close;
+  end;
+end;
+
+end.

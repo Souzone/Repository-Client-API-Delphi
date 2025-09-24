@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+	<Transactions>
+    <Transaction>2018/01/29 21:43:39.000.791,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 03\_TEMP\Wizard\WizardForm.pas=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 04\WorkArea\Marvin.IU.Aula04.Assistente.pas</Transaction>
+    <Transaction>2018/01/29 21:43:39.000.791,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 03\_TEMP\Wizard\WizardForm.fmx=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 04\WorkArea\Marvin.IU.Aula04.Assistente.fmx</Transaction>
+    <Transaction>2018/01/29 21:44:12.000.135,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 03\_TEMP\Wizard\Wizard.dproj=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 04\WorkArea\Aula04_Assistente.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

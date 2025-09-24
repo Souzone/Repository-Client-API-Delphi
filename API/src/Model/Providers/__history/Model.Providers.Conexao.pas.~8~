@@ -1,0 +1,56 @@
+unit Model.Providers.Conexao;
+
+interface
+
+uses
+  Model.Interfaces,
+  FireDAC.Stan.Intf,
+  FireDAC.Stan.Option,
+  FireDAC.Stan.Param,
+  FireDAC.Stan.Error,
+  FireDAC.DatS,
+  FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf,
+  FireDAC.Stan.Async,
+  FireDAC.DApt,
+  Data.DB,
+  FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client;
+
+type
+  TModelProvidersConexao = class(TInterfacedObject, IModelInterfaces)
+  private
+    FdConexao: TFdquery;
+  public
+    constructor create;
+    destructor destroy; override;
+    Class Function New: IModelInterfaces;
+    function FdConexao: TFdquery;
+  end;
+
+implementation
+
+{ TModelProvidersConexao }
+
+constructor TModelProvidersConexao.create;
+begin
+
+end;
+
+destructor TModelProvidersConexao.destroy;
+begin
+
+  inherited;
+end;
+
+function TModelProvidersConexao.FdConexao: TFdquery;
+begin
+  Result:= FdConexao;
+end;
+
+class function TModelProvidersConexao.New: IModelInterfaces;
+begin
+  result := self.create;
+end;
+
+end.

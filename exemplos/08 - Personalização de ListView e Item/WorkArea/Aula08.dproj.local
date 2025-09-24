@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/02/02 16:21:08.000.057,=C:\Users\mvbraga\Documents\Embarcadero\Studio\Projects\Unit6.pas</Transaction>
+    <Transaction>2018/02/02 16:21:38.000.232,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 08\WorkArea\Marvin.UI.Aula08.Start.fmx=C:\Users\mvbraga\Documents\Embarcadero\Studio\Projects\Unit6.fmx</Transaction>
+    <Transaction>2018/02/02 16:21:38.000.232,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 08\WorkArea\Marvin.UI.Aula08.Start.pas=C:\Users\mvbraga\Documents\Embarcadero\Studio\Projects\Unit6.pas</Transaction>
+    <Transaction>2018/02/02 16:21:42.000.463,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 08\WorkArea\Aula08.dproj=C:\Users\mvbraga\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2018/02/02 18:19:17.000.458,=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 08\WorkArea\Unit1.pas</Transaction>
+    <Transaction>2018/02/02 18:20:37.000.747,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 08\WorkArea\Unit1.pas=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 08\WorkArea\Marvin.Entity.Produto.Clss.pas</Transaction>
+    <Transaction>2018/02/02 18:20:44.000.689,=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 08\WorkArea\Unit1.pas</Transaction>
+    <Transaction>2018/02/02 18:21:21.000.485,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 08\WorkArea\Unit1.pas=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 08\WorkArea\Marvin.Entity.Produto.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

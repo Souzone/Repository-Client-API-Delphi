@@ -1,0 +1,16 @@
+program API;
+
+uses
+  Vcl.Forms,
+  View.Main in 'src\View\View.Main.pas' {FrmMain},
+  Model.Providers.Conexao in 'src\Model\Providers\Model.Providers.Conexao.pas',
+  Model.Interfaces in 'src\Model\Model.Interfaces.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmMain, FrmMain);
+  Application.Run;
+end.

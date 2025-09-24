@@ -1,0 +1,129 @@
+object FrmCadFun: TFrmCadFun
+  Left = 0
+  Top = 0
+  BorderStyle = None
+  Caption = 'Form1'
+  ClientHeight = 345
+  ClientWidth = 677
+  Position = MainFormCenter
+  Transparency = True
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  DesignerMasterStyle = 0
+  object Rectangle2: TRectangle
+    Align = Contents
+    Fill.Color = claBlack
+    Opacity = 0.200000002980232200
+    Size.Width = 677.000000000000000000
+    Size.Height = 345.000000000000000000
+    Size.PlatformDefault = False
+    object FloatAnimation1: TFloatAnimation
+      Duration = 0.200000002980232200
+      PropertyName = 'Opacity'
+      StartValue = 0.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+  end
+  object Rectangle1: TRectangle
+    Align = Center
+    Fill.Color = claWhite
+    Size.Width = 677.000000000000000000
+    Size.Height = 87.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 20.000000000000000000
+    YRadius = 20.000000000000000000
+    object EdtNome: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      StyleLookup = 'editstyle'
+      TabOrder = 3
+      Position.X = 20.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 241.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Nome'
+      StyledSettings = [Family, Style, FontColor]
+    end
+    object EdtSalario: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight]
+      StyleLookup = 'editstyle'
+      TabOrder = 0
+      Position.X = 285.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 149.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Sal'#225'rio'
+      StyledSettings = [Family, Style, FontColor]
+    end
+    object Label1: TLabel
+      StyledSettings = []
+      Position.X = 20.000000000000000000
+      Position.Y = 22.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFF333940
+      Text = 'Nome:'
+      TabOrder = 2
+    end
+    object Label2: TLabel
+      StyledSettings = []
+      Position.X = 285.000000000000000000
+      Position.Y = 22.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFF333940
+      Text = 'Sal'#225'rio:'
+      TabOrder = 1
+    end
+    object Rectangle6: TRectangle
+      Anchors = [akTop, akRight]
+      Fill.Color = xFF00CD0E
+      Position.X = 463.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      object BtnConsultar: TSpeedButton
+        Align = Contents
+        StyledSettings = []
+        Size.Width = 137.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Confirmar'
+        TextSettings.Font.Family = 'Roboto'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        OnClick = BtnConsultarClick
+      end
+    end
+    object SpeedButton1: TSpeedButton
+      StyledSettings = []
+      Position.X = 8.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 14.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Voltar'
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claRed
+    end
+  end
+end

@@ -1,0 +1,60 @@
+unit Controller;
+
+interface
+
+uses
+Controller.Interfaces,
+Controller.Funcionarios,
+Model.Threds.LoadingShow;
+
+type
+  TController = class(TInterfacedObject, IControllerInterfaces)
+  private
+    FControllerFuncionarios : IControllerFuncionarios;
+
+  public
+    Constructor create;
+    Destructor Destroy; override;
+    Class Function New: IControllerInterfaces;
+    Function Funcionarios: IControllerFuncionarios;
+    procedure ShowApplication;
+  end;
+
+implementation
+
+{ TController }
+
+constructor TController.create;
+begin
+
+end;
+
+destructor TController.Destroy;
+begin
+  inherited;
+end;
+
+function TController.Funcionarios: IControllerFuncionarios;
+begin
+//  if not assigned(FControllerFuncionarios) then
+//    FControllerFuncionarios:= TControllerFuncionarios.New;
+//
+//  Result:= FControllerFuncionarios;
+end;
+
+class function TController.New: IControllerInterfaces;
+begin
+  Result := self.create;
+end;
+
+procedure TController.ShowApplication;
+var
+FThreadLoadingShow : TModelThreadsLoading;
+begin
+  FThreadLoadingShow := TModelThreadsLoading.Create(True);
+  FThreadLoadingShow.FreeOnTerminate := True;
+  FThreadLoadingShow.Start;
+
+end;
+
+end.

@@ -1,0 +1,158 @@
+object FrameListViewProdutos: TFrameListViewProdutos
+  Size.Width = 522.000000000000000000
+  Size.Height = 438.000000000000000000
+  Size.PlatformDefault = False
+  object LayoutMainListView: TLayout
+    Align = Client
+    Padding.Left = 4.000000000000000000
+    Padding.Top = 4.000000000000000000
+    Padding.Right = 4.000000000000000000
+    Padding.Bottom = 4.000000000000000000
+    Size.Width = 522.000000000000000000
+    Size.Height = 438.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object GridLayout1: TGridLayout
+      Align = Right
+      HitTest = False
+      ItemHeight = 48.000000000000000000
+      ItemWidth = 48.000000000000000000
+      Orientation = Vertical
+      Margins.Left = 8.000000000000000000
+      Position.X = 468.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 430.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object CircleCarregarListView: TCircle
+        Fill.Color = xFF0ACFF8
+        Padding.Left = 8.000000000000000000
+        Padding.Top = 8.000000000000000000
+        Padding.Right = 8.000000000000000000
+        Padding.Bottom = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Bitmap.WrapMode = Tile
+        Stroke.Kind = Bitmap
+        OnClick = CircleCarregarListViewClick
+        object ImageCarregarListView: TImage
+          MultiResBitmap.Height = 22
+          MultiResBitmap.Width = 22
+          MultiResBitmap.LoadSize = 1
+          MultiResBitmap = <
+            item
+              Width = 32
+              Height = 24
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000200000001808060000009B53FF
+                34000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                023349444154484BED95CD6B135110C093463750424EE9C10AEA2121A0A0C528
+                88C72A24861ECD498FA250DB43FF0F153F40B45EBCD882C14B90351FA2E4A078
+                120B1A942417F560295E9253366EE26FB22F60DADD7DDBB3F9C16466E77DCCEC
+                CCCBDBD094FF9EB0D281C8E572C7513786C3E145F431F185C3E1EFA8D7B66D3F
+                AED56A9FC5B71F022590C9640E261289DB98CB048C38DE49486A807A148FC7D7
+                8AC5A2E578F5CC28ED890AFE92C0AB489F40770783C199582C362B82EF2CD3EE
+                A32D64B9DBED960B8582E1ACD6A3AD00657F805A21F04F64A95AAD6E392393E4
+                F3F905DA20891E66DEC34AA572530DF9E29B40369B3D81DA9237E7ADCF79051F
+                A392F88079003945125F46033EF8B680C0D711E9F9BA2EB8609AE627E63F9135
+                B256B97DF14D8052CA690FF1F6CF468E00307753F478AD0E5D058E8A66336D29
+                FFE1ABFCB0F6C8E84983EF19E000765131C330E2A55249EC3D704ED2047B8B79
+                C8F1B8F29E3D726E7BE85AF043B4655972185DE1A07D4349B9B7478E5DB0C73B
+                AFE082AE0535655E55DA9572B9DC402D22134948F068347AC92BB8A0ABC03A62
+                23D728F569E57665771241820BAED7EA9876BBBD934AA5E6A8C4791E97D2E9F4
+                9B66B3F9CB19DD4BABD5DA49269326C1E7097E59175CD0DE8472AD763A1D9324
+                2EB0B1DCF14FB19F4722918FFD7E5FD6679093BD5EEF5EBD5EFF236BF6833601
+                4125710BD3F363041BB4E18AB203E3DB82318D46C3A61DAF28EF0B12900FD22C
+                6E035BCE87FCEF37903BCCF92DF3A74C094E28F4176793F298B80EE4FB000000
+                0049454E44AE426082}
+              FileName = 
+                'D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 10\WorkArea\Im' +
+                'gs\Reload.png'
+            end>
+          Align = Client
+          HitTest = False
+          MarginWrapMode = Center
+          Size.Width = 32.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object ColorAnimationCarregarListView: TColorAnimation
+          Enabled = True
+          Duration = 0.200000002980232200
+          PropertyName = 'Fill.Color'
+          StartValue = claWhite
+          StopValue = xFF0ACFF8
+        end
+      end
+      object ShadowEffectCarregarListView: TShadowEffect
+        Distance = 1.000000000000000000
+        Direction = 90.000000000000000000
+        Softness = 0.200000002980232200
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+    end
+    object ListViewProdutos: TListView
+      ItemAppearanceClassName = 'TDynamicAppearance'
+      ItemEditAppearanceClassName = 'TDynamicAppearance'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Align = Client
+      Size.Width = 456.000000000000000000
+      Size.Height = 430.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+        item
+          AppearanceObjectName = 'Descricao'
+          AppearanceClassName = 'TTextObjectAppearance'
+          Appearance.Font.Family = 'Roboto'
+          Appearance.Font.Size = 14.000000000000000000
+          Appearance.TextAlign = Leading
+          Appearance.Width = 247.000000000000000000
+          Appearance.Height = 44.000000000000000000
+          Appearance.PlaceOffset.X = 14.000000000000000000
+        end
+        item
+          AppearanceObjectName = 'CodigoBarras'
+          AppearanceClassName = 'TTextObjectAppearance'
+          Appearance.Font.Family = 'Roboto'
+          Appearance.Font.Size = 11.000000000000000000
+          Appearance.Width = 175.000000000000000000
+          Appearance.Height = 23.000000000000000000
+          Appearance.Align = Trailing
+        end
+        item
+          AppearanceObjectName = 'Codigo'
+          AppearanceClassName = 'TTextObjectAppearance'
+          Appearance.Font.Family = 'Roboto'
+          Appearance.Font.Size = 11.000000000000000000
+          Appearance.Width = 175.000000000000000000
+          Appearance.Height = 23.000000000000000000
+          Appearance.Align = Trailing
+          Appearance.PlaceOffset.Y = 22.000000000000000000
+        end>
+      ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+        item
+          AppearanceObjectName = 'Text1'
+          AppearanceClassName = 'TTextObjectAppearance'
+        end>
+      ItemAppearanceObjects.HeaderObjects.Text.Font.Family = 'Roboto'
+      ItemAppearanceObjects.HeaderObjects.Text.Font.Size = 14.000000000000000000
+      ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00070000000000000004000000}
+      ItemAppearanceObjects.FooterObjects.Text.Font.Family = 'Roboto'
+      ItemAppearanceObjects.FooterObjects.Text.Font.Size = 10.000000000000000000
+      StyleLookup = 'listviewstyle'
+      object ShadowEffectListViewProdutos: TShadowEffect
+        Distance = 2.000000000000000000
+        Direction = 90.000000000000000000
+        Softness = 0.200000002980232200
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+    end
+  end
+end

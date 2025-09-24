@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/05/24 10:17:12.000.937,=C:\Users\Asus\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2025/09/09 06:44:31.000.900,=C:\Users\Asus\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2025/09/09 06:46:26.000.484,C:\Users\Asus\Documents\Embarcadero\Studio\Projects\Unit4.dfm=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\View\View.Main.dfm</Transaction>
+    <Transaction>2025/09/09 06:46:26.000.484,C:\Users\Asus\Documents\Embarcadero\Studio\Projects\Unit4.pas=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\View\View.Main.pas</Transaction>
+    <Transaction>2025/09/09 06:46:45.000.881,C:\Users\Asus\Documents\Embarcadero\Studio\Projects\Project2.dproj=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\API.dproj</Transaction>
+    <Transaction>2025/09/09 06:54:27.000.727,=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\View\View.Main.pas</Transaction>
+    <Transaction>2025/09/09 20:48:50.000.024,=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas</Transaction>
+    <Transaction>2025/09/09 20:52:44.000.907,D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\Model\Providers\Model.Providers.Conexao.pas</Transaction>
+    <Transaction>2025/09/09 20:54:32.000.023,=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas</Transaction>
+    <Transaction>2025/09/09 20:54:52.000.363,D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\Model\Model.Interfaces.pas</Transaction>
+    <Transaction>2025/09/09 21:07:18.000.550,=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas</Transaction>
+    <Transaction>2025/09/09 21:08:09.000.068,D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\Controller\Funcionarios\Controller.Funcionarios.pas</Transaction>
+    <Transaction>2025/09/09 21:08:35.000.133,=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas</Transaction>
+    <Transaction>2025/09/09 21:08:46.000.216,D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\Controller\Controller.Interfaces.pas</Transaction>
+    <Transaction>2025/09/09 21:10:59.000.643,D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\Controller\Funcionarios\Controller.Funcionarios.pas=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\Controller\Controller.pas</Transaction>
+    <Transaction>2025/09/09 21:12:09.000.937,=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas</Transaction>
+    <Transaction>2025/09/09 21:12:22.000.465,D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\Controller\Funcionarios\Controller.Funcionarios.pas</Transaction>
+    <Transaction>2025/09/09 21:14:29.000.138,=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas</Transaction>
+    <Transaction>2025/09/09 21:14:37.000.727,D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\Model\Model.pas</Transaction>
+    <Transaction>2025/09/10 19:41:01.787,=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas</Transaction>
+    <Transaction>2025/09/10 19:41:36.262,D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\src\Model\Services\Model.Services.Funcionarios.pas=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\api\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,91 @@
+unit Controller.Funcionarios;
+
+interface
+
+uses
+  System.SysUtils;
+
+procedure Registry;
+
+implementation
+
+uses
+  horse,
+  Model.Services.Funcionarios,
+  Model.Interfaces,
+  Model.Providers.Conexao,
+  Json,
+  DataSet.Serialize,
+  horse.HandleException;
+
+procedure SalvarFuncionario(Req: ThorseRequest; Res: THorseResponse;
+  Next: TProc);
+var
+  LService: IModelServicesFuncionarios;
+  LConexao: IModelProviders;
+begin
+  LConexao := TModelProvidersConexao.create;
+  LService := TModelServicesFuncionarios.create(LConexao);
+
+  Res.send<TjsonObject>(LService.Insert(Req.Body<TjsonObject>).ToJsonObject)
+    .Status(ThttpStatus.Created);
+end;
+
+procedure ObterFuncionario(Req: ThorseRequest; Res: THorseResponse;
+  Next: TProc);
+var
+  LService: IModelServicesFuncionarios;
+  LConexao: IModelProviders;
+  LIdFuncionario: Int64;
+begin
+  LConexao := TModelProvidersConexao.create;
+  LService := TModelServicesFuncionarios.create(LConexao);
+  LIdFuncionario := strtoint64(Req.Params.Items['id']);
+
+  if LService.GetById(LIdFuncionario).IsEmpty then
+    raise EHorseException.new.Error('Funcionário Não Existe')
+      .Status(ThttpStatus.NotFound);
+
+  Res.send<TjsonObject>(LService.GetById(LIdFuncionario).ToJsonObject)
+    .Status(ThttpStatus.OK);
+end;
+
+procedure DeletarFuncionario(Req: ThorseRequest; Res: THorseResponse;
+  Next: TProc);
+var
+  LService: IModelServicesFuncionarios;
+  LConexao: IModelProviders;
+  LIdFuncionario: Int64;
+begin
+  LConexao := TModelProvidersConexao.create;
+  LService := TModelServicesFuncionarios.create(LConexao);
+  LIdFuncionario := strtoint64(Req.Params.Items['id']);
+
+  if LService.GetById(LIdFuncionario).IsEmpty then
+    raise EHorseException.new.Error('Funcionário Não Existe')
+      .Status(ThttpStatus.NotFound);
+
+  LService.delete;
+end;
+
+procedure ListarFuncionarios(Req: ThorseRequest; Res: THorseResponse;
+  Next: TProc);
+var
+  LService: IModelServicesFuncionarios;
+  LConexao: IModelProviders;
+begin
+  LConexao := TModelProvidersConexao.create;
+  LService := TModelServicesFuncionarios.create(LConexao);
+
+  Res.send<TJSONArray>(LService.ListAll().ToJSONArray).Status(ThttpStatus.OK);
+end;
+
+Procedure Registry;
+begin
+  THorse.Post('/Funcionarios', SalvarFuncionario);
+  THorse.Get('/Funcionarios/:id', ObterFuncionario);
+  THorse.Get('/Funcionarios', ListarFuncionarios);
+  THorse.Delete('/Funcionarios/:id', DeletarFuncionario);
+end;
+
+end.

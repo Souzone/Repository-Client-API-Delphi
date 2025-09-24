@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/05/24 10:17:12.000.937,=C:\Users\Asus\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2025/09/10 21:44:37.000.801,=C:\Users\Asus\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2025/09/10 21:45:45.000.364,C:\Users\Asus\Documents\Embarcadero\Studio\Projects\Unit4.pas=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\Client\src\View\View.Main.pas</Transaction>
+    <Transaction>2025/09/10 21:45:45.000.364,C:\Users\Asus\Documents\Embarcadero\Studio\Projects\Unit4.fmx=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\Client\src\View\View.Main.fmx</Transaction>
+    <Transaction>2025/09/10 21:50:29.000.831,C:\Users\Asus\Documents\Embarcadero\Studio\Projects\Project2.dproj=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\Client\src\Client.dproj</Transaction>
+    <Transaction>2025/09/10 21:53:48.000.728,=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\Client\src\View\View.Main.pas</Transaction>
+    <Transaction>2025/09/10 22:15:38.000.939,=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\Client\Unit1.pas</Transaction>
+    <Transaction>2025/09/23 22:28:28.000.270,=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\Client\Unit1.pas</Transaction>
+    <Transaction>2025/09/23 22:29:03.000.106,D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\Client\Unit1.pas=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\Client\src\View\View.CadastroFuncionarios.pas</Transaction>
+    <Transaction>2025/09/23 22:29:03.000.106,D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\Client\Unit1.fmx=D:\Cursos\Academia do Código Delphi Senior\Arquitetura 3 camadas\Client\src\View\View.CadastroFuncionarios.fmx</Transaction>
+  </Transactions>
+</BorlandProject>

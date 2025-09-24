@@ -1,0 +1,129 @@
+unit View.Main;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.ExtCtrls,
+  Vcl.Buttons,
+  Vcl.StdCtrls,
+  Horse,
+  Horse.Jhonson,
+  Horse.BasicAuthentication,
+  controller.Funcionarios,
+  Controller.Interfaces,
+  Horse.HandleException;
+
+type
+  TFrmMain = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Label1: TLabel;
+    Panel4: TPanel;
+    BtnIniciar: TSpeedButton;
+    Memo1: TMemo;
+    Panel5: TPanel;
+    BtnParar: TSpeedButton;
+    TrayIcon1: TTrayIcon;
+    BtnMinimizar: TSpeedButton;
+    BtnFecharApp: TSpeedButton;
+    procedure BtnIniciarClick(Sender: TObject);
+    procedure BtnPararClick(Sender: TObject);
+    procedure TrayIcon1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure BtnMinimizarClick(Sender: TObject);
+    procedure BtnFecharAppClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure IniciarAPI;
+    var FController:IControllerInterfaces;
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmMain: TFrmMain;
+
+implementation
+
+uses
+  Controller;
+
+{$R *.dfm}
+
+procedure TFrmMain.FormCreate(Sender: TObject);
+begin
+  ReportMemoryLeaksOnShutdown:= true;
+
+  FController := Tcontroller.create;
+  IniciarAPI;
+  FController.ShowApplication;
+  BtnParar.Enabled :=false;
+end;
+
+procedure TFrmMain.IniciarAPI;
+begin
+  THorse.Use(Jhonson());
+  THorse.Use(handleException);
+  THorse.Use(HorseBasicAuthentication(
+    function(const AUsername, APassword: string): Boolean
+    begin
+      // Here inside you can access your database and validate if username and password are valid
+      Result := AUsername.Equals('user') and APassword.Equals('123');
+    end));
+
+  Controller.Funcionarios.Registry;
+
+  THorse.Listen(9000);
+  memo1.Lines.Add('-- API foi iniciada com sucesso! Data Hora: '+ DateTimeToStr(now));
+end;
+
+procedure TFrmMain.BtnFecharAppClick(Sender: TObject);
+begin
+  THorse.StopListen;
+  close;
+end;
+
+procedure TFrmMain.BtnIniciarClick(Sender: TObject);
+begin
+  if thorse.IsRunning = true then
+  begin
+    memo1.Lines.Add('-- API já foi iniciada! Data Hora: '+ DateTimeToStr(now));
+    exit;
+  end;
+  IniciarAPI;
+
+  BtnParar.Enabled :=true;
+  BtnIniciar.Enabled :=false;
+end;
+
+procedure TFrmMain.BtnPararClick(Sender: TObject);
+begin
+  THorse.StopListen;
+  memo1.Lines.Add('-- API foi Interrompida! Data Hora: '+ DateTimeToStr(now));
+  BtnParar.Enabled :=false;
+  BtnIniciar.Enabled :=true;
+end;
+
+procedure TFrmMain.BtnMinimizarClick(Sender: TObject);
+begin
+  hide;
+end;
+
+procedure TFrmMain.TrayIcon1Click(Sender: TObject);
+begin
+  show;
+  Application.Restore;
+  TrayIcon1.Visible:=true;
+end;
+
+end.

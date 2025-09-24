@@ -1,0 +1,14 @@
+program Client;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  View.Main in 'src\View\View.Main.pas' {FrmMain};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TFrmMain, FrmMain);
+  Application.Run;
+end.

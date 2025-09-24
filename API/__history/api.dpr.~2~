@@ -1,0 +1,16 @@
+program api;
+
+uses
+  Vcl.Forms,
+  Project2 in 'Project2.res' {Form4},
+  conexao in 'src\conexao.pas' {DataModule1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.Run;
+end.

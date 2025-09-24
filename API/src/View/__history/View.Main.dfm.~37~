@@ -1,0 +1,212 @@
+object FrmMain: TFrmMain
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'API Comunica'#231#227'o Web'
+  ClientHeight = 617
+  ClientWidth = 877
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe Print'
+  Font.Style = [fsBold]
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 21
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 877
+    Height = 617
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clSkyBlue
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitWidth = 861
+    ExplicitHeight = 578
+    DesignSize = (
+      877
+      617)
+    object Panel2: TPanel
+      Left = 0
+      Top = 0
+      Width = 877
+      Height = 65
+      Align = alTop
+      BevelOuter = bvNone
+      Color = clWhite
+      ParentBackground = False
+      TabOrder = 0
+      ExplicitWidth = 861
+      object Label1: TLabel
+        Left = 0
+        Top = 0
+        Width = 877
+        Height = 65
+        Align = alClient
+        Alignment = taCenter
+        Caption = 'Seja Bem Vindo Ao Universo WEB'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -21
+        Font.Name = 'Segoe Print'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Layout = tlCenter
+        ExplicitTop = -6
+      end
+      object BtnMinimizar: TSpeedButton
+        Left = 752
+        Top = 8
+        Width = 117
+        Height = 33
+        Caption = 'Minimizar'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe Print'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = BtnMinimizarClick
+      end
+      object BtnFecharApp: TSpeedButton
+        Left = 650
+        Top = 8
+        Width = 79
+        Height = 20
+        Caption = 'Fechar App'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Segoe Print'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = BtnFecharAppClick
+      end
+    end
+    object Panel3: TPanel
+      Left = 0
+      Top = 552
+      Width = 877
+      Height = 65
+      Align = alBottom
+      BevelOuter = bvNone
+      Color = clWhite
+      ParentBackground = False
+      TabOrder = 1
+      ExplicitTop = 513
+      ExplicitWidth = 861
+      DesignSize = (
+        877
+        65)
+      object Panel4: TPanel
+        Left = 683
+        Top = 13
+        Width = 185
+        Height = 41
+        Anchors = [akTop, akRight, akBottom]
+        BevelOuter = bvNone
+        Color = 55552
+        ParentBackground = False
+        TabOrder = 0
+        ExplicitLeft = 667
+        DesignSize = (
+          185
+          41)
+        object BtnIniciar: TSpeedButton
+          Left = -2
+          Top = -2
+          Width = 189
+          Height = 46
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Caption = 'INICIAR'
+          Flat = True
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe Print'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnClick = BtnIniciarClick
+        end
+      end
+      object Panel5: TPanel
+        Left = 479
+        Top = 13
+        Width = 185
+        Height = 41
+        Anchors = [akTop, akRight, akBottom]
+        BevelOuter = bvNone
+        Color = clRed
+        ParentBackground = False
+        TabOrder = 1
+        ExplicitLeft = 463
+        DesignSize = (
+          185
+          41)
+        object BtnParar: TSpeedButton
+          Left = -2
+          Top = -2
+          Width = 189
+          Height = 46
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Caption = 'Parar'
+          Flat = True
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe Print'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnClick = BtnPararClick
+        end
+      end
+    end
+    object Memo1: TMemo
+      AlignWithMargins = True
+      Left = 10
+      Top = 72
+      Width = 905
+      Height = 467
+      Margins.Left = 10
+      Margins.Top = 10
+      Margins.Right = 10
+      Margins.Bottom = 10
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = bsNone
+      Color = clSkyBlue
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -15
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentCtl3D = False
+      ParentFont = False
+      ParentShowHint = False
+      ReadOnly = True
+      ScrollBars = ssVertical
+      ShowHint = False
+      TabOrder = 2
+    end
+    object Button1: TButton
+      Left = 728
+      Top = 272
+      Width = 75
+      Height = 25
+      Caption = 'Button1'
+      TabOrder = 3
+    end
+  end
+  object TrayIcon1: TTrayIcon
+    Visible = True
+    OnClick = TrayIcon1Click
+    Left = 768
+    Top = 376
+  end
+end

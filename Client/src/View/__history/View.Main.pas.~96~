@@ -1,0 +1,201 @@
+unit View.Main;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Dialogs,
+  FMX.Objects,
+  FMX.Layouts,
+  FMX.Controls.Presentation,
+  FMX.MultiView,
+  FMX.StdCtrls,
+  System.Rtti,
+  FMX.Grid.Style,
+  FMX.Grid,
+  FMX.ScrollBox,
+  FMX.ListView.Types,
+  FMX.ListView.Appearances,
+  FMX.ListView.Adapters.Base,
+  FMX.ListView,
+  FMX.Header,
+  RestRequest4D,
+  DataSet.Serialize.Adapter.RESTRequest4D,
+  FMX.Edit, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client,
+  System.JSON,
+  View.CadastroFuncionarios;
+
+type
+  TFrmMain = class(TForm)
+    Layout1: TLayout;
+    Layout4: TLayout;
+    Layout2: TLayout;
+    Layout3: TLayout;
+    Layout5: TLayout;
+    Layout6: TLayout;
+    MultiView1: TMultiView;
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
+    Image1: TImage;
+    SpeedButton1: TSpeedButton;
+    StyleBook1: TStyleBook;
+    Rectangle4: TRectangle;
+    Rectangle5: TRectangle;
+    EdtConsultar: TEdit;
+    Rectangle6: TRectangle;
+    FDMemTable1: TFDMemTable;
+    Rectangle7: TRectangle;
+    Rectangle8: TRectangle;
+    BtnConsultar: TSpeedButton;
+    BtnIncluir: TSpeedButton;
+    BtnExcluir: TSpeedButton;
+    Label1: TLabel;
+    Rectangle9: TRectangle;
+    ListView1: TListView;
+    Label4: TLabel;
+    Label2: TLabel;
+    Rectangle3: TRectangle;
+    procedure BtnExcluirClick(Sender: TObject);
+    procedure ListView1ItemClick(const Sender: TObject;
+      const AItem: TListViewItem);
+    procedure BtnConsultarClick(Sender: TObject);
+    procedure BtnIncluirClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure PovoarTabela;
+  end;
+
+var
+  FrmMain: TFrmMain;
+
+implementation
+
+{$R *.fmx}
+
+
+procedure TFrmMain.ListView1ItemClick(const Sender: TObject;
+  const AItem: TListViewItem);
+begin
+  AItem.Data['GlyphButton5'] := not  (AItem.Data['GlyphButton5']).AsBoolean ;
+end;
+
+procedure TFrmMain.PovoarTabela;
+var
+  FItem: TListViewItem;
+begin
+  FDMemTable1.Close;
+  Trequest.new.BaseURL('http://localhost:9000')
+    .Resource('Funcionarios')
+    .BasicAuthentication('user','123')
+    .Accept('application/json')
+    .Adapters(TDataSetSerializeAdapter.new(FDMemTable1))
+    .Get;
+  FDMemTable1.open;
+
+
+  ListView1.Items.Clear; // limpa antes de popular
+
+  // Garante que o DataSet está aberto
+  if not FDMemTable1.Active then
+    FDMemTable1.Open;
+    FDMemTable1.Filtered := False;
+
+  // Percorre todos os registros do DataSet
+  FDMemTable1.First;
+  while not FDMemTable1.Eof do
+  begin
+    FItem := ListView1.Items.Add;
+    FItem.Text :=FDMemTable1.FieldByName('nome').AsString;
+    FItem.Data['Text1'] := FDMemTable1.FieldByName('id').AsString;      // Produto
+    FItem.Data['Text2'] := FDMemTable1.FieldByName('nome').AsString;   // Quantidade
+    FItem.Data['Text3'] := FDMemTable1.FieldByName('salario').AsString;        // Preço
+    FItem.Data['TextButton6'] :='editar';
+    ListView1.Items.ItemsInvalidate;
+    FDMemTable1.Next;
+  end;
+end;
+
+procedure TFrmMain.BtnConsultarClick(Sender: TObject);
+var
+  TextoBusca: string;
+  FItem: TListViewItem;
+begin
+  TextoBusca := LowerCase(Trim(EdtConsultar.Text));
+
+  // Se o campo estiver vazio, limpa a lista e repovoa
+  if TextoBusca = '' then
+  begin
+    PovoarTabela;
+  end
+  else
+  begin
+    FDMemTable1.Filtered := False; // desativa o filtro antes de criar
+    FDMemTable1.Filter := 'Nome LIKE ''%Gabriel%''';
+    FDMemTable1.Filtered := True;  // ativa o filtro
+
+    ListView1.Items.Clear;
+    FDMemTable1.First;
+    FDMemTable1.Filtered := False;
+    while not FDMemTable1.Eof do
+    begin
+      FItem := ListView1.Items.Add;
+      FItem.Text :=FDMemTable1.FieldByName('nome').AsString;
+      FItem.Data['Text1'] := FDMemTable1.FieldByName('id').AsString;      // Produto
+      FItem.Data['Text2'] := FDMemTable1.FieldByName('nome').AsString;   // Quantidade
+      FItem.Data['Text3'] := FDMemTable1.FieldByName('salario').AsString;        // Preço
+      FItem.Data['TextButton6'] :='editar';
+      ListView1.Items.ItemsInvalidate;
+      FDMemTable1.Next;
+    end;
+
+  end;
+
+end;
+
+procedure TFrmMain.BtnExcluirClick(Sender: TObject);
+var
+  Item :TListViewItem;
+var
+  LResponse: IResponse;
+begin
+  if not Assigned(ListView1.Selected) then
+   raise Exception.Create('Selecione um Item primeiro!');
+
+
+    LResponse:=
+    Trequest.new.BaseURL('http://localhost:9000')
+      .Resource('Funcionarios')
+      .ResourceSuffix(TListViewItem(ListView1.Selected).Data['Text1'].ToString)
+      .BasicAuthentication('user','123')
+      .Accept('application/json')
+      .delete;
+
+      PovoarTabela;
+
+end;
+
+procedure TFrmMain.BtnIncluirClick(Sender: TObject);
+begin
+if not Assigned(FrmCadFun) then
+  FrmCadFun := TFrmCadFun.Create(self);
+  try
+  FrmCadFun.ShowModal;
+  finally
+  freeandnil(FrmCadFun);
+  end;
+end;
+
+end.

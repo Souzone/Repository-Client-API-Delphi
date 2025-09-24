@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+	<Transactions>
+    <Transaction>2018/01/29 21:06:31.000.102,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 03\_TEMP\Interpolation\TestInterpolationForm.pas=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 03\_TEMP\Interpolation\Marvin.UI.Aula3.TesteAnimacao.pas</Transaction>
+    <Transaction>2018/01/29 21:06:31.000.102,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 03\_TEMP\Interpolation\TestInterpolationForm.fmx=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 03\_TEMP\Interpolation\Marvin.UI.Aula3.TesteAnimacao.fmx</Transaction>
+    <Transaction>2018/01/29 21:06:46.000.949,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 03\_TEMP\Interpolation\TestInterpolation.dproj=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 03\_TEMP\Interpolation\TesteAnimacao.dproj</Transaction>
+    <Transaction>2018/01/29 21:44:48.000.045,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 03\_TEMP\Interpolation\TesteAnimacao.dproj=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 04\WorkArea\Aula04_TesteAnimacao.dproj</Transaction>
+    <Transaction>2018/01/29 21:48:56.000.171,=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 04\WorkArea\Marvin.UI.Aula3.TesteAnimacao.pas</Transaction>
+    <Transaction>2018/01/29 21:49:08.000.003,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 04\WorkArea\Marvin.UI.Aula4.TesteAnimacao.fmx=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 04\WorkArea\Marvin.UI.Aula3.TesteAnimacao.fmx</Transaction>
+    <Transaction>2018/01/29 21:49:08.000.003,D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 04\WorkArea\Marvin.UI.Aula4.TesteAnimacao.pas=D:\_DESENV\_TEMP\_CURSO DESIGN DE INTERFACES\Aula 04\WorkArea\Marvin.UI.Aula3.TesteAnimacao.pas</Transaction>
+  </Transactions>
+</BorlandProject>

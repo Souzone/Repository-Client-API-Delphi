@@ -1,0 +1,64 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 469
+  ClientWidth = 377
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object RoundRect1: TRoundRect
+    Fill.Color = claSeagreen
+    Position.X = 120.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claGhostwhite
+    Stroke.Thickness = 3.000000000000000000
+    object TXT_Info: TText
+      Align = Top
+      Size.Width = 153.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Iniciar'
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claGhostwhite
+      OnClick = TXT_InfoClick
+    end
+    object ShadowEffect1: TShadowEffect
+      Distance = 2.000000000000000000
+      Direction = 90.000000000000000000
+      Softness = 0.200000002980232200
+      Opacity = 0.600000023841857900
+      ShadowColor = claBlack
+    end
+    object FloatAnimation1: TFloatAnimation
+      Duration = 0.200000002980232200
+      OnProcess = FloatAnimation3Process
+      OnFinish = FloatAnimation1Finish
+      PropertyName = 'Height'
+      StartValue = 49.000000000000000000
+      StopValue = 399.000000000000000000
+    end
+    object FloatAnimation2: TFloatAnimation
+      Duration = 0.200000002980232200
+      OnProcess = FloatAnimation3Process
+      OnFinish = FloatAnimation2Finish
+      PropertyName = 'Position.X'
+      StartValue = 120.000000000000000000
+      StopValue = 3.000000000000000000
+    end
+    object FloatAnimation3: TFloatAnimation
+      Duration = 0.200000002980232200
+      OnProcess = FloatAnimation3Process
+      OnFinish = FloatAnimation3Finish
+      PropertyName = 'Width'
+      StartValue = 153.000000000000000000
+      StopValue = 371.000000000000000000
+    end
+  end
+end

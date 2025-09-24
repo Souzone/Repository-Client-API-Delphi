@@ -1,0 +1,31 @@
+unit Model.Threds.LoadingShow;
+
+interface
+
+uses
+  System.Classes,
+  Vcl.Dialogs;
+
+type
+  TModelThreadsLoading = class(TThread)
+    private
+
+    protected
+    procedure Execute;override;
+  end;
+
+implementation
+
+{ TModelThreadsLoading }
+
+procedure TModelThreadsLoading.Execute;
+begin
+  while not Terminated and not Application.Terminated do
+  begin
+    Sleep(1000);
+    // ações seguras
+    showmessage('teste');
+  end;
+end;
+
+end.

@@ -1,0 +1,43 @@
+unit Model.Interfaces;
+
+interface
+
+uses
+  FireDAC.Stan.Intf,
+  FireDAC.Stan.Option,
+  FireDAC.Stan.Param,
+  FireDAC.Stan.Error,
+  FireDAC.DatS,
+  FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf,
+  FireDAC.Stan.Async,
+  FireDAC.DApt,
+  Data.DB,
+  FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client,
+  System.JSON;
+
+type
+  IModelProviders = interface;
+
+  IModelInterfaces = interface
+  ['{34401A41-120D-436E-BF13-473801B9F192}']
+  Function Providers: IModelProviders;
+  end;
+
+  IModelProviders = interface
+    ['{58ABD005-5452-46F3-9E4B-FF8735E07090}']
+    function FdConexao : TFdQuery;
+  end;
+
+  IModelServicesFuncionarios = interface
+    ['{9A7FCB59-0D0B-468C-AFA2-20FF39B3272E}']
+    Function Insert(Const AFuncionario:TJsonObject): TFDQuery;
+    Function GetById(Const AId: Int64): TFDQuery;
+    Function ListAll: TFDQuery;
+    Function delete(Const AId: Int64): Boolean;
+  end;
+
+implementation
+
+end.
